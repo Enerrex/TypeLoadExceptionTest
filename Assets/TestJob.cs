@@ -11,8 +11,8 @@ public struct RequestPathMessage : IComponentData, IEnableableComponent
     public float TimeStamp;
     public Entity RequestingEntity;
     public Entity ContainingRegion;
-    public OffsetHexCoordinate Start;
-    public OffsetHexCoordinate End;
+    public Coordinate Start;
+    public Coordinate End;
 }
 
 
@@ -35,8 +35,8 @@ public partial struct SelectTilesOnGridJob : IJobEntity
             {
                 RequestingEntity = new Entity(),
                 ContainingRegion = entity,
-                Start = new OffsetHexCoordinate(),
-                End = new OffsetHexCoordinate(),
+                Start = new Coordinate(),
+                End = new Coordinate(),
             }
         );
     }
