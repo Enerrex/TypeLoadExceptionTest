@@ -45,5 +45,14 @@ namespace FlatTop
             OffsetEvenNeighbors,
             OddNeighbors
         };
+
+        public static Coordinate ExampleUsage
+        (
+            int oddOrEven,
+            int neighborDirection
+        )
+        {
+            return DirectionLookup[oddOrEven][neighborDirection];
+        }
     }
 }
